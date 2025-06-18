@@ -1,0 +1,117 @@
+/* full-viewport blank canvas */
+/* make container the positioning context */
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* fix the header up top-left */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.logo-img {
+  height: 40px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+.app-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* mic / stop button */
+.mic-btn,
+.stop-btn {
+  width: 120px;
+  height: 120px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.mic-btn {
+  border-radius: 50%;
+  background: #3399ff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+.stop-btn {
+  border-radius: 50%;
+  background: #e74c3c;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+.mic-btn:hover,
+.stop-btn:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
+}
+
+/* status / transcript text */
+.status {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #000;
+  max-width: 600px;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* send button wrapper (right-aligned) */
+.send-wrapper {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.send-btn {
+  background: #28a745;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+}
+.send-btn:hover {
+  background: #218838;
+}
+.send-btn:active {
+  transform: scale(0.97);
+}
+.send-btn svg {
+  fill: #fff;
+}
+
+/* error styling */
+.error {
+  color: #c00;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+}
